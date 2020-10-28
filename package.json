@@ -1,6 +1,6 @@
 {
   "name": "react-webtech-animated-icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React libraby which contain animated icons of popular web technologies",
   "main": "build/index.js",
   "module": "build/index.es.js",
