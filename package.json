@@ -1,6 +1,6 @@
 {
   "name": "react-webtech-animated-icons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React libraby which contain animated icons of popular web technologies",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "publish":"rollup -c && npm publish",
+    "publish": "rollup -c && npm publish",
     "hot": "webpack serve --mode development"
   },
   "repository": {
