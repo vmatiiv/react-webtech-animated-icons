@@ -15,13 +15,13 @@ const firstElement = keyframes`
         transform:translate(0,0);
     }
     25%{
-        transform:translate(5%,5%);
+        transform:translate(5px,5px);
     }
     50%{
-        transform:translate(10%,10%);
+        transform:translate(10px,10px);
     }
     75%{
-        transform:translate(5%,5%);
+        transform:translate(5px,5px);
     }
     100%{
         transform:translate(0,0);
@@ -33,13 +33,13 @@ const secondElement = keyframes`
         transform:translate(0,0);
     }
     25%{
-        transform:translate(-5%,5%);
+        transform:translate(-5px,5px);
     }
     50%{
-        transform:translate(-10%,10%);
+        transform:translate(-10px,10px);
     }
     75%{
-        transform:translate(-5%,5%);
+        transform:translate(-5px,5px);
     }
     100%{
         transform:translate(0,0);
@@ -51,13 +51,13 @@ const thirdElement = keyframes`
         transform:translate(0,0);
     }
     25%{
-        transform:translate(0,-5%);
+        transform:translate(0,-5px);
     }
     50%{
-        transform:translate(0%,-10%);
+        transform:translate(0,-10px);
     }
     75%{
-        transform:translate(0%,-5%);
+        transform:translate(0,-5px);
     }
     100%{
         transform:translate(0,0);
@@ -98,7 +98,7 @@ function WebpackIcon({
 }:IconProps) {
   return (
 
-    <Svg secondColor={secondColor} firstColor={firstColor} dur={duration} width={size} height={size} viewBox="0 0 320 320" {...rest}>
+    <Svg secondColor={secondColor} firstColor={firstColor} dur={duration} width={size} height={size} viewBox="0 0 255 280" {...rest}>
 
       <g fill="currentColor">
         <path d="M233.153208,212.286792 L132.250566,269.427925 L132.250566,224.990189 L195.139623,190.357736 L233.153208,212.286792 Z M240.060377,206.055849 L240.060377,86.6535849 L203.157736,107.954717 L203.157736,184.754717 L240.060377,206.055849" />

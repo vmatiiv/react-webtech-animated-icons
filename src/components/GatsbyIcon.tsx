@@ -6,14 +6,9 @@ const radius = keyframes`
   0%{r:0;}
   100%{r:12;}
 `;
-const reverse = keyframes`
-  0%{r:12}
-  100%{r:0}
-`;
+
 const Svg = styled.svg`
-  circle{
-    animation: ${reverse} ${(props) => `${props.dur}s`} ease forwards;
-  }
+
   &:hover{
     circle{
       animation: ${radius} ${(props) => `${props.dur}s`} ease forwards;

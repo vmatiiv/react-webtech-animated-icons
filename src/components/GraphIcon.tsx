@@ -4,7 +4,8 @@ import IconProps from '../Icon.type';
 
 interface ISvg{
     dur:number,
-    firstColor:string
+    firstColor:string,
+    secondColor:string
 }
 const changeColor = (endColor:string) => keyframes`
     0% {
@@ -14,39 +15,25 @@ const changeColor = (endColor:string) => keyframes`
         fill:${endColor}
         }
 `;
-const xz = (start:number, end:number) => keyframes`
+const sideLines = (start:number, end:number, endColor:string) => keyframes`
     0%{
         stroke-dashoffset:${start};
     }
     100%{
-        stroke:#E535AB;
+        stroke:${endColor};
         stroke-dashoffset:${end};
     }
 `;
-const reverse = (start:number, end:number) => keyframes`
-    0%{
-        stroke-dashoffset:${start};
 
-    }
-    100%{
-        stroke-dashoffset:${end};
-        stroke:currentColor;
-    }
-`;
 
 const Svg = styled.svg<ISvg>`
-    & g:nth-child(1){
-        animation:${reverse(400, 0)} ${(props) => `${props.dur}s`} ease forwards;
-    }
-    & path{
-        animation:${reverse(800, 0)} ${(props) => `${props.dur + 1}s`} ease forwards;
-    }
+
     &:hover{
         & g:nth-child(1){
-            animation:${xz(0, 400)} ${(props) => `${props.dur}s`} ease forwards;
+            animation:${(props) => sideLines(0, 400, props.secondColor)} ${(props) => `${props.dur}s`} ease forwards;
         }
         & path{
-            animation:${xz(0, 800)} ${(props) => `${props.dur + 1}s`} ease forwards;
+            animation:${(props) => sideLines(0, 800, props.secondColor)} ${(props) => `${props.dur + 1}s`} ease forwards;
         }
         & circle{
             animation:${(props) => changeColor(props.firstColor)} ${(props) => `${props.dur}s`} ease forwards;
@@ -57,7 +44,7 @@ function GraphIcon({
   firstColor, secondColor, size, duration, ...rest
 }:IconProps) {
   return (
-    <Svg firstColor={firstColor} id="graph" viewBox="0 0 320 320" width={size} height={size} dur={duration} {...rest}>
+    <Svg firstColor={firstColor} secondColor={secondColor} viewBox="0 0 320 320" width={size} height={size} dur={duration} {...rest}>
       <g stroke="currentColor" fill="currentColor" strokeDasharray="200" strokeDashoffset="0">
         <line strokeWidth="10" x1="50" x2="160" y1="225" y2="30" />
         <line strokeWidth="10" x1="50" x2="273" y1="225" y2="225" />
