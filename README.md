@@ -1,6 +1,6 @@
 # react-webtech-animated-icons
 
-react-webtech-animated-icons is a React library that contains animated SVG icons of most popular web technologies logos.
+react-webtech-animated-icons is a React library that contains animated SVG icons of most popular web technologies.
 
 ## Installation
 
@@ -9,6 +9,9 @@ Use the package manager [npm](https://www.npmjs.com/package/react-webtech-animat
 ```bash
 npm install react-webtech-animated-icons
 ```
+## Demo
+
+[https://animated-icons.netlify.app/](https://animated-icons.netlify.app/)
 
 ## Usage
 

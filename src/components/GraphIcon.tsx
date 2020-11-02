@@ -24,8 +24,6 @@ const sideLines = (start:number, end:number, endColor:string) => keyframes`
         stroke-dashoffset:${end};
     }
 `;
-
-
 const Svg = styled.svg<ISvg>`
 
     &:hover{
@@ -87,7 +85,7 @@ function GraphIcon({
 }
 GraphIcon.defaultProps = {
   firstColor: '#663399',
-  secondColor: '#fff',
+  secondColor: '#663399',
   size: 32,
   duration: 2,
   strokeWidth: 0,
